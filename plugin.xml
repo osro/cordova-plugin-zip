@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin xmlns="http://phonegap.com/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-zip"
-    version="3.0.0">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-zip"
+        version="3.0.0">
   <engines>
     <engine name="cordova" version=">=3.3.0" />
   </engines>
@@ -23,6 +23,17 @@
         <param name="android-package" value="org.apache.cordova.Zip"/>
       </feature>
     </config-file>
+  </platform>
+
+  <platform name="wp8">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="Zip">
+        <param name="wp-package" value="Zip"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/wp8/Zip.cs" />
+    <source-file src="src/wp8/SharpGIS.UnZipper.cs" />
   </platform>
 
   <platform name="ios">
